@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "mobblindness",
+  "version": "1.0.0",
+
+  "name": "Mob Blindness",
+  "description": "Allows mobs to be affected by blindness debuffs.",
+  "authors": [
+    "RaltsMC"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/mob-blindness",
+    "sources": "https://github.com/raltsmc/mobblindness",
+    "issues": "https://github.com/raltsmc/mobblindness/issues"
+  },
+
+  "license": "MIT",
+  "icon": "assets/mobblindness/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "raltsmc.mobblindness.MBMod"
+    ],
+    "modmenu": [
+      "raltsmc.mobblindness.config.MBModMenu"
+    ]
+  },
+  "mixins": [
+    "mobblindness.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "fabric": "*",
+    "minecraft": "1.16.x"
+  }
+}
