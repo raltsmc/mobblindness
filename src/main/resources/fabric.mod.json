@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "id": "mobblindness",
-  "version": "1.0.0",
+  "version": "1.0.1",
 
   "name": "Mob Blindness",
   "description": "Allows mobs to be affected by blindness debuffs.",
   "authors": [
-    "RaltsMC"
+    "raltsmc"
   ],
   "contact": {
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/mob-blindness",
@@ -33,6 +33,6 @@
   "depends": {
     "fabricloader": ">=0.7.4",
     "fabric": "*",
-    "minecraft": "1.16.x"
+    "minecraft": "1.17.x"
   }
 }

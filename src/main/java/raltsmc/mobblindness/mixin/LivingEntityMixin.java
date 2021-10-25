@@ -6,7 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffects;
-import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.Packet;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -34,8 +34,7 @@ public class LivingEntityMixin extends Entity {
             cancellable = true
     )
     public void getAttackDistanceScalingFactor(@Nullable Entity entity, CallbackInfoReturnable<Double> info, double d) {
-        if (entity instanceof LivingEntity && !this.world.isClient()) {
-            LivingEntity livingEntity = (LivingEntity)entity;
+        if (entity instanceof LivingEntity livingEntity && !this.world.isClient()) {
             if (livingEntity.hasStatusEffect(StatusEffects.BLINDNESS)) {
                 int amplifier = livingEntity.getStatusEffect(StatusEffects.BLINDNESS).getAmplifier();
                 for (int i = 0; i < amplifier + 1; i++) {
@@ -54,13 +53,13 @@ public class LivingEntityMixin extends Entity {
 
     @Shadow
     @Override
-    public void readCustomDataFromTag(CompoundTag tag) {
+    public void readCustomDataFromNbt(NbtCompound tag) {
 
     }
 
     @Shadow
     @Override
-    public void writeCustomDataToTag(CompoundTag tag) {
+    public void writeCustomDataToNbt(NbtCompound tag) {
 
     }
 
