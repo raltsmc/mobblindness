@@ -29,11 +29,6 @@ dependencies {
 	}
 	include "me.shedaniel.cloth:cloth-config-fabric:5.0.38"
 
-	modImplementation("me.sargunvohra.mcmods:autoconfig1u:3.3.1") {
-		exclude(group: "net.fabricmc.fabric-api")
-	}
-	include "me.sargunvohra.mcmods:autoconfig1u:3.3.1"
-
 	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
 	modImplementation "com.terraformersmc:modmenu:2.0.14"

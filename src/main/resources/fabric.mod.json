@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "mobblindness",
-  "version": "1.0.1",
+  "version": "1.0.1.1",
 
   "name": "Mob Blindness",
   "description": "Allows mobs to be affected by blindness debuffs.",
